@@ -25,7 +25,7 @@ SECRET_KEY = 'e5151!1_jw018xqg+2^0b%)n75%)rycw5)(-#ud5$&dvsf96-#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','sampledomain.com']
+ALLOWED_HOSTS = ['127.0.0.1','handwritingrecognitionsystem.herokuapp.com']
 
 
 # Application definition
