@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Add Student{% endblock %}
+{% block content %}
+<body>
+    {% include 'navbar_auth.html' %}
+    <br><br><br><br><br><br><br>
+    <div class="container" style="display: grid; align-items: center;">
+        <div class="text-center">
+            <h1 class="h2 text-gray-900 mb-4">Student Info</h1>
+        </div>
+        <table id="exportMe" class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                    <tr>
+                        <td>{{student.0}}</td>
+                        <td>{{student.1}}</td>
+                        <td>{{student.2}}</td>
+                    </tr>
+                    
+                {% endfor %}
+              
+            </tbody>
+          </table>
+          <form>
+            <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <button id="csv" class="btn btn-primary btn-user btn-block" style="background-color: #02723b;">
+                        <i class="fas fa-file-csv"></i> &nbsp&nbsp Export as CSV
+                    </button>
+                </div>
+                <div class="col-sm-6">
+                    <button id="pdf" onclick="Export()" class="btn btn-primary btn-user btn-block" style="background-color: #b30b00;">
+                        <i class="fas fa-file-pdf"></i> &nbsp&nbsp Export as PDF
+                    </button>
+                </div>
+              </div>
+          </form>
+    </div>
+</body>
+
+<!-- Downloas as CSV -->
+<script>
+    const toCsv = function(table) {
+        // Query all rows
+        const rows = table.querySelectorAll('tr');
+    
+        return [].slice.call(rows)
+            .map(function(row) {
+                // Query all cells
+                const cells = row.querySelectorAll('th,td');
+                return [].slice.call(cells)
+                    .map(function(cell) {
+                        return cell.textContent;
+                    })
+                    .join(',');
+            })
+            .join('\n');
+    };
+
+    const download = function(text, fileName) {
+        const link = document.createElement('a');
+        link.setAttribute('href', `data:text/csv;charset=utf-8,${encodeURIComponent(text)}`);
+        link.setAttribute('download', fileName);
+    
+        link.style.display = 'none';
+        document.body.appendChild(link);
+    
+        link.click();
+    
+        document.body.removeChild(link);
+    };
+
+    const table = document.getElementById('exportMe');
+    const exportBtn = document.getElementById('csv');
+
+    exportBtn.addEventListener('click', function() {
+        // Export to csv
+        const csv = toCsv(table);
+
+        // Download it
+        download(csv, 'Student.csv');
+    });
+</script>
+
+<!-- Downloas as PDF -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function Export() {
+        html2canvas(document.getElementById('exportMe'), {
+            onrendered: function (canvas) {
+                var data = canvas.toDataURL();
+                var docDefinition = {
+                    content: [{
+                        image: data,
+                        width: 500
+                    }]
+                };
+                pdfMake.createPdf(docDefinition).download("Student.pdf");
+            }
+        });
+    }
+</script>
+{% endblock %}

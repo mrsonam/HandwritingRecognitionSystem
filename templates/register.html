@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<body style="background-color:#f1f2f3;">
+    {% include 'navbar.html' %}
+    <br><br><br><br><br>
+    <div id="particles-js">
+      <img src="{% static 'img/waves.png' %}" alt="Waves">
+    </div>
+    <div class="container" style="z-index: 999;">
+      <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-image"><img src="{% static 'img/register.jpg' %}" width=110%></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h2 text-gray-900 mb-4">Create an Account!</h1>
+                        </div>
+                        <!-- registration form -->
+                        <form method="post" action="/registration_form_submission/">
+                          {% csrf_token %}
+                          <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="text" name="first_name" placeholder="First Name" class="custom" required>
+                            </div>
+                            <div class="col-sm-6">
+                              <input type="text" name="last_name" placeholder="Last Name" class="custom" required>
+                            </div> 
+                          </div>
+                          <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" class="custom" required>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="password" id="password" name="password1" placeholder="Password" class="custom" required>
+                              <lord-icon
+                                id="togglePassword"
+                                src="https://cdn.lordicon.com//tyounuzx.json"
+                                trigger="loop-on-hover"
+                                colors="primary:#545454,secondary:#545454"
+                                stroke="80"
+                                style="width:40px;height:40px;position:absolute; margin-top:-12%; margin-left: 75%; cursor: pointer; text-align: center;">
+                              </lord-icon>
+                              <!-- <i class="far fa-eye" id="togglePassword" style="position:absolute; margin-top:-9%; margin-left: 77%; cursor: pointer; text-align: center;"></i> -->
+                            </div>
+                            <div class="col-sm-6">
+                              <input type="password" id="password2" name="password2" placeholder="Confirm Password" class="custom" required>
+                              <lord-icon
+                                id="togglePassword2"
+                                src="https://cdn.lordicon.com//tyounuzx.json"
+                                trigger="loop-on-hover"
+                                colors="primary:#545454,secondary:#545454"
+                                stroke="80"
+                                style="width:40px;height:40px;position:absolute; margin-top:-12%; margin-left: 75%; cursor: pointer; text-align: center;">
+                              </lord-icon>
+                              <!-- <i class="far fa-eye" id="togglePassword2" style="position:absolute; margin-top:-9%; margin-left: 77%; cursor: pointer; text-align: center;"></i> -->
+                            </div>
+                          </div>
+
+                          <!-- displays message on the page -->
+                          {% if messages %}
+                            {% for message in messages%}
+                              {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                                <div class="alert alert-secondary alert-dismissable" role="alert" style="background-color: #6A994E; color:#fff">
+                                  <button class="close" data-dismiss="alert" style="color: #fff;">
+                                      <small><sup>x</sup></small>
+                                  </button>
+                                  {{ message}}
+                                </div>
+                              {% endif %}
+                              {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                                <div class="alert alert-secondary alert-dismissable" role="alert" style="background-color: #D62828; color:#fff">
+                                  <button class="close" data-dismiss="alert" style="color: #fff;">
+                                      <small><sup>x</sup></small>
+                                  </button>
+                                  {{ message}}
+                                </div>
+                              {% endif %}
+                            {% endfor %}
+                          {% endif %}
+                          
+                          <button id="btn" type="submit" class="btn btn-primary btn-user btn-block">
+                            Register Account
+                          </button>
+                        </form>
+                        <hr>
+                        <!-- <button id="btn" onclick="googleLogin()" class="btn btn-google btn-user btn-block" style="background-color: #ea4335; color: white;">
+                          <i class="fab fa-google fa-fw"></i> Login with Google
+                        </button>
+                        <button id="btn" onclick="facebookLogin()" class="btn btn-facebook btn-user btn-block" style="background-color: #3b5998; color: white;">
+                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                        </button>
+                        <hr> -->
+                        
+                        <div class="text-center">
+                            <a class="small" href="/login">Already have an account? Login!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- JS to toggle view password -->
+    <script>
+      const togglePassword = document.querySelector('#togglePassword');
+      const password = document.querySelector('#password');
+
+      togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+      });
+
+      const togglePassword2 = document.querySelector('#togglePassword2');
+      const password2 = document.querySelector('#password2');
+
+      togglePassword2.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+        password2.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+      });
+    </script>
+</body>
+{% endblock %}

@@ -1,0 +1,45 @@
+<!-- Navigation Bar to be displayed when the user is logged in -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <body onload="myFunction()">
+        <div id="loading">
+            <img src="{% static 'img/813.gif' %}" class="center">
+        </div>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #212529; padding:10px">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="/welcome">Handwriting Recognition System</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto" >
+                        <li class="nav-item">
+                            <a class="nav-link" href="/welcome">&nbsp;Home</a> 
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="/add_student"><i class="fas fa-user-plus"></i>&nbsp;Add Student</a> 
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="/student_info"><i class="fas fa-address-card"></i>&nbsp;Student Info</a> 
+                        </li>&nbsp;
+                        <div class="dropdown nav-item">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0px; margin:0px">
+                                
+                                    <img class=" rounded-circle account-img" src="{{ profilePic }}" style="width: 60px; height: 60px">
+                                
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #212529;">
+                                <p class="dropdown-item nav-link" style="background-color: #212529; margin-bottom: -5px;">{{name}}</p>
+                                <a class="dropdown-item nav-link" style="background-color: #212529;" href="/settings"><i class="fas fa-cog"></i>&nbsp; &nbsp;Settings</i></a>
+                                <a class="dropdown-item nav-link" style="background-color: #212529;" href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp; &nbsp;Logout</a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>

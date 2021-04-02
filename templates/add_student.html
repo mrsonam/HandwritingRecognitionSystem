@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Add Student{% endblock %}
+{% block content %}
+<body>
+    {% include 'navbar_auth.html' %}
+    <br><br><br><br><br><br><br>
+    <div class="container" style="display: grid; align-items: center;">
+        <div class="text-center">
+            <h1 class="h2 text-gray-900 mb-4">Add Student</h1>
+        </div>
+
+        <!-- student form -->
+        <form method="post" action="/student_form_submission/">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" name="f_name" value="{{f_name}}" placeholder="First Name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="m_name" value="{{m_name}}" placeholder="Middle Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="l_name" value="{{l_name}}" placeholder="Last Name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="address" value="{{address}}" placeholder="Address" class="form-control" required>
+            </div>
+
+            <!-- displays message on the screen -->
+            {% if messages %}
+                {% for message in messages%}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                    <div class="alert alert-secondary alert-dismissable" role="alert" style="background-color: #6A994E; color:#fff">
+                    <button class="close" data-dismiss="alert" style="color: #fff;">
+                        <small><sup>x</sup></small>
+                    </button>
+                    {{ message}}
+                    </div>
+                {% endif %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                    <div class="alert alert-secondary alert-dismissable" role="alert" style="background-color: #D62828; color:#fff">
+                    <button class="close" data-dismiss="alert" style="color: #fff;">
+                        <small><sup>x</sup></small>
+                    </button>
+                    {{ message}}
+                    </div>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+            
+            <button type="submit" id="btn" class="btn btn-primary btn-user btn-block">
+                Add
+            </button>
+        </form> 
+        
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "handwriting-recognition-system",
+  "private_key_id": "6299b4fd1eb5a00d2441125adf08827ac61baa25",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCW8PjNy8agVzsp\nchmwR3Nci0tnZV2lWZyCAz5XbDKH0D6SFW0dEqMfJNWVnejRO0VScEsH6GLBAduR\nuDmK7Y/Ru2CBHsviH4PMYJWwfgcxEoV59O2fXQ831lOorZOBAVx/gWKkHpK7s5wI\n2Q3GZBseTfcS6fpxghAGJosYJNEJqWVSMCPMPjMnXoEeqOYStXnqWX1CDn7L830t\ncccZymbBOATyEN9vKwKnQ6XUypDgzW9xZigiPY4OzB11hL0AcrOr8AOCLTXVlLTK\nfM8PgTILE5/YGcNM6aeNLvfgsnZRHhzxrXH5mmLKIYrPIwUdryQihr06yg8N69ru\nSHCRO32fAgMBAAECggEAAlBQmAqcHaxIo6pDijXDIQLFUrlydca3VDzd3xVV3Ku3\nWvdh7In/MThtZW9ffr+qoKD/UT+YXsrKbScAeRfHk2G3YBrwAgvL9TEtuv6ZR3ri\nv86egcOO0yMf/tYAmPOfFLd3X9XahVZ8gnejxXzHTPkGdEe+hDZjWIqBI6mtYlfE\nwoQaQQeoPEUO/rVgbsBf77nSTe5JvFIRuvlcCyElK3m1TDnEJu5zND9MkBmWoVcp\nm+yQtC9elxkvHxsVNoAnF3zUAp3JT6bVkkT9+Tu1PwS9HHzpqObU/yLQh9toZDbY\nq+RWcdxtwwPRXzbYFcEu0tbPPPfMWtyBwREP2pSu/QKBgQDUnV7vJJjEh7THEuSG\nmL2qj1opoYX/4zjRI3GLU4Et6ws2lg18fzepiXHatKXJVfV6AZ6cDKjPR5QkeFsS\nfWtY+A5umL7lxP+n4eTqqVJb4UoaOqGOU0qiSdKyxjj9tIJADRxDasFMfSGYKa1s\nSkH6aqzRqYJtbbWlMQiWA4BGSwKBgQC1veL2d5Q32RailQmPOWZVaAG9ZUxcum+6\nKK3HmwztXtSy+eG2pZTL2TWCo+sflfBhbPflTTr4Hel1p2KOrYQqqXc6P9PKIarR\nX5zV99mvvEytYJ63GCkHwkboIc0ktiokJEpNWQUyIkuvZlJu5knOhrhj9tNxsgxx\ncQeUv6yhfQKBgQDPNpDPgVtiLuCBJGiUxUgUcqHs8P8n5Mv7CBAhOcEsf2buTE/Y\nhiQ5lzrfbDAniR81SV7Lt4rOeXRoFuSroJB+pUNrhnKGfPitJft0uJEL+wW9imbp\nz0Nt54Txtz7UBJjs09o32lOJuGqFYhki8TxcUpsbu5jiDYp69M7pZYAfAQKBgQCr\n7BFD7iK8IhSTgEEmx7nSmSzsKWNvZL5EcC7UYAx+j/LNzCyFR2XW4IcKKl5F5uUa\nhKaMt95M0J8EuW82YVZhtSYgaDjFQcwBfF00292FrK8sY/ZAZg6KVHIXLcKOM/Tx\nc5MGUGvl3SOTrUvVtOuk/zR2/AtRxoiW18HAKQH5UQKBgCrl+Zo7H04UitSZFE5Y\nVLk+X4VIz5rQJD26dIDGS0A4DebSb0a9sfP1fLzXpSeavex+UdX4dRNMcuBJrT0z\nrH/SWivTUUAufFJc5ffOAu/sN21jVom0ybTpC6r5/V37e7GwQZZqYNKCyj6PzqR7\ntnaStDQKda2hHH39tBjeC1mq\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-1mq3v@handwriting-recognition-system.iam.gserviceaccount.com",
+  "client_id": "117590934695513618430",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-1mq3v%40handwriting-recognition-system.iam.gserviceaccount.com"
+}

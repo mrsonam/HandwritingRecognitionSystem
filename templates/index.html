@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  .custom-shape-divider-bottom-1617221233 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-bottom-1617221233 svg {
+      position: relative;
+      display: block;
+      width: calc(104% + 1.3px);
+      height: 150px;
+  }
+
+  .custom-shape-divider-bottom-1617221233 .shape-fill {
+      fill: #FFFFFF;
+  }
+</style>
+<body style="background-color:#f1f2f3;">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="/">Handwriting Recognition System</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/login">Login</a>
+        </li>
+        </ul>
+    </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead" style="position: relative; background-color:#f1f2f3;">
+    <div class="container" >
+      <div class="custom-shape-divider-bottom-1617221233">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="intro-text">
+        <div class="intro-lead-in">Welcome To Handwriting Recognition System!</div>
+        <div class="intro-heading text-uppercase" style="color: #D4E6B5;">Let's get started</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+         href="#aboutus">Get TO KNOW US</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section class="page-section" id="aboutus">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Services</h2>
+          <h3 class="section-subheading text-muted">What we provide</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary" style="color: white;"></i>
+            <lord-icon
+                src="https://cdn.lordicon.com//wxnxiano.json"
+                trigger="loop-on-hover"
+                colors="primary:#ffffff,secondary:#ffffff"
+                stroke="70"
+                style="width:110px;height:110px;margin-bottom:20px">
+            </lord-icon>
+          </span>
+          <br><br>
+          <h4 class="service-heading" style="color: #E2D686;">Upload Forms</h4>
+          <p class="text-muted">Upload scanned pictures of filled forms to further recognize them.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary" style="color: white;"></i>
+            <lord-icon
+                src="https://cdn.lordicon.com//msoeawqm.json"
+                trigger="loop-on-hover"
+                delay="50"
+                stroke="70"
+                colors="primary:#ffffff,secondary:#ffffff"
+                style="width:110px;height:110px;margin-bottom:20px">
+            </lord-icon>
+          </span>
+          <br><br>
+          <h4 class="service-heading" style="color: #E2D686;">Recognize Characters</h4>
+          <p class="text-muted">Handwriting Recognition System recognizes handwritten data from forms.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <lord-icon
+                src="https://cdn.lordicon.com//koyivthb.json"
+                trigger="loop-on-hover"
+                colors="primary:#ffffff,secondary:#ffffff"
+                stroke="69"
+                style="width:110px;height:110px;margin-bottom:20px">
+            </lord-icon>
+          </span>
+          <br><br>
+          <h4 class="service-heading" style="color: #E2D686;">Save Data</h4>
+          <p class="text-muted">Export your recognized form data to excel files.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+  
+  <!-- Footer -->
+  <footer class="footer" style="z-index:999;">
+    <div class="container">
+      <hr class="text-muted">
+      <div class="row">    
+          <span class="copyright">Copyright &copy; Handwriting Recognition System 2021</span>  
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="/privacy_policy" target="_blank">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/terms_conditions" target="_blank">Terms and Conditions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="text-muted">
+    </div>
+  </footer>
+
+  <!-- SVG -->
+  <svg id="wave" style="position:relative; z-index:0; transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 230" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(175, 201, 126, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(240.429, 236.855, 228.957, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,69L26.7,84.3C53.3,100,107,130,160,138C213.3,146,267,130,320,111.2C373.3,92,427,69,480,72.8C533.3,77,587,107,640,134.2C693.3,161,747,184,800,184C853.3,184,907,161,960,157.2C1013.3,153,1067,169,1120,172.5C1173.3,176,1227,169,1280,153.3C1333.3,138,1387,115,1440,103.5C1493.3,92,1547,92,1600,84.3C1653.3,77,1707,61,1760,57.5C1813.3,54,1867,61,1920,84.3C1973.3,107,2027,146,2080,145.7C2133.3,146,2187,107,2240,111.2C2293.3,115,2347,161,2400,164.8C2453.3,169,2507,130,2560,103.5C2613.3,77,2667,61,2720,57.5C2773.3,54,2827,61,2880,57.5C2933.3,54,2987,38,3040,53.7C3093.3,69,3147,115,3200,130.3C3253.3,146,3307,130,3360,115C3413.3,100,3467,84,3520,76.7C3573.3,69,3627,69,3680,69C3733.3,69,3787,69,3813,69L3840,69L3840,230L3813.3,230C3786.7,230,3733,230,3680,230C3626.7,230,3573,230,3520,230C3466.7,230,3413,230,3360,230C3306.7,230,3253,230,3200,230C3146.7,230,3093,230,3040,230C2986.7,230,2933,230,2880,230C2826.7,230,2773,230,2720,230C2666.7,230,2613,230,2560,230C2506.7,230,2453,230,2400,230C2346.7,230,2293,230,2240,230C2186.7,230,2133,230,2080,230C2026.7,230,1973,230,1920,230C1866.7,230,1813,230,1760,230C1706.7,230,1653,230,1600,230C1546.7,230,1493,230,1440,230C1386.7,230,1333,230,1280,230C1226.7,230,1173,230,1120,230C1066.7,230,1013,230,960,230C906.7,230,853,230,800,230C746.7,230,693,230,640,230C586.7,230,533,230,480,230C426.7,230,373,230,320,230C266.7,230,213,230,160,230C106.7,230,53,230,27,230L0,230Z"></path>
+    <defs>
+      <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(175, 201, 126, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(137.973, 137.973, 137.973, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,69L26.7,92C53.3,115,107,161,160,168.7C213.3,176,267,146,320,141.8C373.3,138,427,161,480,176.3C533.3,192,587,199,640,168.7C693.3,138,747,69,800,53.7C853.3,38,907,77,960,84.3C1013.3,92,1067,69,1120,49.8C1173.3,31,1227,15,1280,23C1333.3,31,1387,61,1440,84.3C1493.3,107,1547,123,1600,122.7C1653.3,123,1707,107,1760,118.8C1813.3,130,1867,169,1920,168.7C1973.3,169,2027,130,2080,118.8C2133.3,107,2187,123,2240,118.8C2293.3,115,2347,92,2400,84.3C2453.3,77,2507,84,2560,92C2613.3,100,2667,107,2720,107.3C2773.3,107,2827,100,2880,111.2C2933.3,123,2987,153,3040,138C3093.3,123,3147,61,3200,49.8C3253.3,38,3307,77,3360,76.7C3413.3,77,3467,38,3520,23C3573.3,8,3627,15,3680,26.8C3733.3,38,3787,54,3813,61.3L3840,69L3840,230L3813.3,230C3786.7,230,3733,230,3680,230C3626.7,230,3573,230,3520,230C3466.7,230,3413,230,3360,230C3306.7,230,3253,230,3200,230C3146.7,230,3093,230,3040,230C2986.7,230,2933,230,2880,230C2826.7,230,2773,230,2720,230C2666.7,230,2613,230,2560,230C2506.7,230,2453,230,2400,230C2346.7,230,2293,230,2240,230C2186.7,230,2133,230,2080,230C2026.7,230,1973,230,1920,230C1866.7,230,1813,230,1760,230C1706.7,230,1653,230,1600,230C1546.7,230,1493,230,1440,230C1386.7,230,1333,230,1280,230C1226.7,230,1173,230,1120,230C1066.7,230,1013,230,960,230C906.7,230,853,230,800,230C746.7,230,693,230,640,230C586.7,230,533,230,480,230C426.7,230,373,230,320,230C266.7,230,213,230,160,230C106.7,230,53,230,27,230L0,230Z"></path>
+  </svg>
+</body>
+{% endblock %}
